@@ -3,11 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.BasicAuthentication">
+      <class name="tests.Chained_Post_Get_Put_Delete">
         <methods>
-          <include name="basicAuthExample"/>
+          <include name="createUser"/>
+          <include name="getUser"/>
+          <include name="deleteUser"/>
+          <include name="updateUser"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- tests.BasicAuthentication -->
+      </class> <!-- tests.Chained_Post_Get_Put_Delete -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

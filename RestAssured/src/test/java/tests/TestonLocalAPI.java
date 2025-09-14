@@ -7,7 +7,7 @@ import io.restassured.http.ContentType;
 
 import static io.restassured.RestAssured.*;
 
-public class testonLocalAPI extends BaseTest {
+public class TestonLocalAPI extends BaseTest {
 
 	//@Test
 	

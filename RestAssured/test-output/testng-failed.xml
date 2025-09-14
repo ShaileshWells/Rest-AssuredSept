@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Rest-AssuredSept]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="PutPatchDelete API Tests(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.PutPatchDelete">
+      <class name="tests.Chained_Post_Get_Put_Delete">
         <methods>
-          <include name="tearDownReport"/>
-          <include name="setUpReport"/>
-          <include name="startTest"/>
-          <include name="testPatch"/>
-          <include name="testPut"/>
-          <include name="updateResult"/>
-          <include name="testDelete"/>
+          <include name="createUser"/>
+          <include name="getUser"/>
+          <include name="deleteUser"/>
+          <include name="updateUser"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- tests.PutPatchDelete -->
+      </class> <!-- tests.Chained_Post_Get_Put_Delete -->
     </classes>
-  </test> <!-- PutPatchDelete API Tests(failed) -->
-</suite> <!-- Failed suite [Rest-AssuredSept] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
