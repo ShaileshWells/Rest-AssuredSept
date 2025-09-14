@@ -1,38 +1,56 @@
 package tests;
 
-	import com.aventstack.extentreports.ExtentReports;
-	import com.aventstack.extentreports.ExtentTest;
-	import org.testng.ITestResult;
-	import org.testng.annotations.AfterMethod;
-	import org.testng.annotations.AfterSuite;
-	import org.testng.annotations.BeforeSuite;
+import java.lang.reflect.Method;   // ✅ correct import
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 
-	import Reporting.ExtentReportManager;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 
-	public class BaseTest {
+public class BaseTest {
 
-	    protected static ExtentReports extent;
-	    protected static ExtentTest test;
+    protected static ExtentReports extentReports;
+    protected static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
 
-	    @BeforeSuite
-	    public void setUpReport() {
-	        String reportPath = System.getProperty("user.dir") + "/test-output/ExtentReport.html";
-	        extent = ExtentReportManager.createInstance(reportPath, "API Automation Report", "Rest Assured Test Results");
-	    }
+    @BeforeSuite
+    public void setUpReport() {
+        String reportPath = System.getProperty("user.dir") + "/test-output/ExtentReport.html";
 
-	    @AfterMethod
-	    public void captureResult(ITestResult result) {
-	        if (result.getStatus() == ITestResult.FAILURE) {
-	            test.fail("Test Failed: " + result.getThrowable());
-	        } else if (result.getStatus() == ITestResult.SUCCESS) {
-	            test.pass("Test Passed");
-	        } else if (result.getStatus() == ITestResult.SKIP) {
-	            test.skip("Test Skipped: " + result.getThrowable());
-	        }
-	    }
+        ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
+        sparkReporter.config().setTheme(Theme.DARK);
+        sparkReporter.config().setReportName("API Automation Report");
+        sparkReporter.config().setDocumentTitle("Rest Assured Test Report");
 
-	    @AfterSuite
-	    public void tearDownReport() {
-	        extent.flush(); // writes everything to ExtentReport.html
-	    }
-	}
+        extentReports = new ExtentReports();
+        extentReports.attachReporter(sparkReporter);
+    }
+
+    @BeforeMethod
+    public void startTest(Method method) {
+        ExtentTest extentTest = extentReports.createTest(method.getName());
+        test.set(extentTest);
+    }
+
+    @AfterMethod
+    public void updateResult(ITestResult result) {
+        if (result.getStatus() == ITestResult.FAILURE) {
+            test.get().fail(result.getThrowable());
+        } else if (result.getStatus() == ITestResult.SKIP) {
+            test.get().skip("Test Skipped: " + result.getThrowable());
+        } else {
+            test.get().pass("Test Passed");
+        }
+    }
+
+    @AfterSuite
+    public void tearDownReport() {
+        if (extentReports != null) {
+            extentReports.flush();
+        }
+    }
+}

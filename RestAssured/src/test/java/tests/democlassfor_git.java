@@ -1,5 +1,5 @@
 package tests;
 
-public class democlassfor_git {
+public class democlassfor_git extends BaseTest {
 
 }

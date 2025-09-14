@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Rest-AssuredSept" verbose="1" parallel="false">
+    <test name="PutPatchDelete API Tests">
+        <classes>
+            <class name="tests.PutPatchDelete"/>
+        </classes>
+    </test>
+</suite>

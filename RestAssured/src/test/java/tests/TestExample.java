@@ -10,7 +10,7 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import static org.hamcrest.Matchers.*;
 
-public class TestExample {
+public class TestExample extends BaseTest {
 @Test
 public void test_1(){
 	

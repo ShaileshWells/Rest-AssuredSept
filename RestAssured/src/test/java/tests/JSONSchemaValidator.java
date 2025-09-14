@@ -4,7 +4,7 @@ import static io.restassured.RestAssured.*;
 import org.testng.annotations.Test;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
-public class JSONSchemaValidator {
+public class JSONSchemaValidator extends BaseTest {
 	
 		@Test
 		public void testGet(){

@@ -11,7 +11,7 @@ import static org.hamcrest.Matchers.*;
 import java.util.HashMap;
 import java.util.Map;
 
-public class GetandPostExample {
+public class GetandPostExample extends BaseTest {
 
 //	@Test
 	public void testGet(){

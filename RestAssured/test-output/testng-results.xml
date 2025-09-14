@@ -1,36 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-14T23:09:16 IST" name="Default suite" finished-at="2025-09-14T23:09:22 IST" duration-ms="6150">
+  <suite started-at="2025-09-15T00:05:17 IST" name="Rest-AssuredSept" finished-at="2025-09-15T00:05:20 IST" duration-ms="3046">
     <groups>
     </groups>
-    <test started-at="2025-09-14T23:09:16 IST" name="Default test" finished-at="2025-09-14T23:09:22 IST" duration-ms="6150">
-      <class name="tests.ApiAuthTest">
-        <test-method is-config="true" signature="setUpReport()[pri:0, instance:tests.ApiAuthTest@1f2586d6]" started-at="2025-09-14T23:09:15 IST" name="setUpReport" finished-at="2025-09-14T23:09:16 IST" duration-ms="320" status="PASS">
+    <test started-at="2025-09-15T00:05:17 IST" name="PutPatchDelete API Tests" finished-at="2025-09-15T00:05:20 IST" duration-ms="3046">
+      <class name="tests.PutPatchDelete">
+        <test-method is-config="true" signature="setUpReport()[pri:0, instance:tests.PutPatchDelete@139982de]" started-at="2025-09-15T00:05:17 IST" name="setUpReport" finished-at="2025-09-15T00:05:17 IST" duration-ms="185" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpReport -->
-        <test-method signature="basicAuthTest()[pri:0, instance:tests.ApiAuthTest@1f2586d6]" started-at="2025-09-14T23:09:16 IST" name="basicAuthTest" finished-at="2025-09-14T23:09:22 IST" duration-ms="6111" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- basicAuthTest -->
-        <test-method is-config="true" signature="captureResult(org.testng.ITestResult)[pri:0, instance:tests.ApiAuthTest@1f2586d6]" started-at="2025-09-14T23:09:22 IST" name="captureResult" finished-at="2025-09-14T23:09:22 IST" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="startTest(java.lang.reflect.Method)[pri:0, instance:tests.PutPatchDelete@139982de]" started-at="2025-09-15T00:05:17 IST" name="startTest" finished-at="2025-09-15T00:05:17 IST" duration-ms="6" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=basicAuthTest status=SUCCESS method=ApiAuthTest.basicAuthTest()[pri:0, instance:tests.ApiAuthTest@1f2586d6] output={null}]]]>
+                <![CDATA[public void tests.PutPatchDelete.testDelete()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- captureResult -->
-        <test-method is-config="true" signature="tearDownReport()[pri:0, instance:tests.ApiAuthTest@1f2586d6]" started-at="2025-09-14T23:09:22 IST" name="tearDownReport" finished-at="2025-09-14T23:09:22 IST" duration-ms="261" status="PASS">
+        </test-method> <!-- startTest -->
+        <test-method signature="testDelete()[pri:0, instance:tests.PutPatchDelete@139982de]" started-at="2025-09-15T00:05:17 IST" name="testDelete" finished-at="2025-09-15T00:05:19 IST" duration-ms="1951" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDelete -->
+        <test-method is-config="true" signature="updateResult(org.testng.ITestResult)[pri:0, instance:tests.PutPatchDelete@139982de]" started-at="2025-09-15T00:05:19 IST" name="updateResult" finished-at="2025-09-15T00:05:19 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testDelete status=SUCCESS method=PutPatchDelete.testDelete()[pri:0, instance:tests.PutPatchDelete@139982de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateResult -->
+        <test-method is-config="true" signature="startTest(java.lang.reflect.Method)[pri:0, instance:tests.PutPatchDelete@139982de]" started-at="2025-09-15T00:05:19 IST" name="startTest" finished-at="2025-09-15T00:05:19 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.PutPatchDelete.testPatch()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method signature="testPatch()[pri:0, instance:tests.PutPatchDelete@139982de]" started-at="2025-09-15T00:05:19 IST" name="testPatch" finished-at="2025-09-15T00:05:19 IST" duration-ms="436" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPatch -->
+        <test-method is-config="true" signature="updateResult(org.testng.ITestResult)[pri:0, instance:tests.PutPatchDelete@139982de]" started-at="2025-09-15T00:05:19 IST" name="updateResult" finished-at="2025-09-15T00:05:19 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testPatch status=SUCCESS method=PutPatchDelete.testPatch()[pri:0, instance:tests.PutPatchDelete@139982de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateResult -->
+        <test-method signature="testPut()[pri:0, instance:tests.PutPatchDelete@139982de]" started-at="2025-09-15T00:05:19 IST" name="testPut" finished-at="2025-09-15T00:05:20 IST" duration-ms="604" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPut -->
+        <test-method is-config="true" signature="startTest(java.lang.reflect.Method)[pri:0, instance:tests.PutPatchDelete@139982de]" started-at="2025-09-15T00:05:19 IST" name="startTest" finished-at="2025-09-15T00:05:19 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void tests.PutPatchDelete.testPut()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method is-config="true" signature="updateResult(org.testng.ITestResult)[pri:0, instance:tests.PutPatchDelete@139982de]" started-at="2025-09-15T00:05:20 IST" name="updateResult" finished-at="2025-09-15T00:05:20 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testPut status=SUCCESS method=PutPatchDelete.testPut()[pri:0, instance:tests.PutPatchDelete@139982de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateResult -->
+        <test-method is-config="true" signature="tearDownReport()[pri:0, instance:tests.PutPatchDelete@139982de]" started-at="2025-09-15T00:05:20 IST" name="tearDownReport" finished-at="2025-09-15T00:05:20 IST" duration-ms="196" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownReport -->
-      </class> <!-- tests.ApiAuthTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- tests.PutPatchDelete -->
+    </test> <!-- PutPatchDelete API Tests -->
+  </suite> <!-- Rest-AssuredSept -->
 </testng-results>
